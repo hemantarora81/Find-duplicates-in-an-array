@@ -1,0 +1,22 @@
+package com.company;
+
+public class FindduplicatesinArray {
+    void Repeating(int [] arr,int size){
+        int i;
+        System.out.println("The Repeating Elements Are");
+        for (i=0; i<size; i++){
+            int j = Math.abs(arr[i]);
+            if (arr[j] >= 0)
+                arr[j] = -arr[j];
+            else
+                System.out.print(j + " ");
+        }
+    }
+    public static void main(String[] args) {
+        FindduplicatesinArray findduplicatesinArray = new FindduplicatesinArray();
+        int[] arr = {1, 4, 4, 3 , 3, 6 , 6};
+        int arr_size = arr.length;
+
+        findduplicatesinArray.Repeating(arr,arr_size);
+    }
+}
